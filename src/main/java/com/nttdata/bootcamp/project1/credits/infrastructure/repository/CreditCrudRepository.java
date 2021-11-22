@@ -37,6 +37,7 @@ public class CreditCrudRepository implements CreditRepository {
         creditDao.setId(credit.getId());
         creditDao.setExpirationDate(credit.getExpirationDate());
         creditDao.setCardType(credit.getCardType());
+        creditDao.setIndicator(credit.isIndicator());
         return creditDao;
     }
 
@@ -45,7 +46,7 @@ public class CreditCrudRepository implements CreditRepository {
         credit.setId(creditDao.getId());
         credit.setExpirationDate(creditDao.getExpirationDate());
         credit.setCardType(creditDao.getCardType());
-        
+        credit.setIndicator(creditDao.isIndicator());
         return credit;
     }
     @Override

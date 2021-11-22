@@ -14,5 +14,4 @@ public interface CreditRepository {
     public Mono<Void> delete(int id);
     public Mono<Credit> update(Mono<Credit> credit, int id);
     public Credit getCredit(int id);
-
 }
